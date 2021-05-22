@@ -1,0 +1,25 @@
+## SOLID
+  - Código limpo é algo que precisa ter na explicação, escrever código limpo é dá
+  nomes declarativos para as funções e variáveis;
+  - Arquitetura limpa e SOLID são padrões para deixar o código limpo;
+  - S => SRP - Single Responsability Principle (Princípio da Responsabilidade Única);
+  - O => OCP - Open-Closed Principle (Pincípio aberto fechado);
+  - L => LSP - Liskov Substituion Principle (Pincíroio da substituição de Liskov);
+  - I => ISP - Interface Segregation Principle (Princípio da segregação de Interface);
+  - D => DEP - Dependency Inversion Principle - (Princípio da inversão de dependência);
+
+- O princípio da dubstituição de Liskov consiste em formar contratos entre classes
+de forma que uma possa substituir a outra; Uma classe assina um contrato com uma
+interface;
+- Podemos criar um subtipo para uma interface, por exemplo, podemos criar uma interface
+para implementação de dois respositórios. Logo os respositórios terão os mesmos métodos
+e a implementação nos controllers não vai mudar para ambos os repositórios, pois eles seguem
+o contrato da mesma interface e possuem os mesmos métodos;
+
+- Quando formos fazer os cadastros das tabelas é bom começar pelos termos independentes,
+as entidades que não dependem de outras;
+
+## Módulos
+  - Podemos estruturar a nossa aplicação em módulos, são pequenos blocos da nossa
+  aplicação;
+  - Criar um módulo de carro, tudo que for de carro deve ficar dentro dessa pasta

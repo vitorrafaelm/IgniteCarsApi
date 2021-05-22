@@ -2,28 +2,25 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Router } from 'express';
 
-import { Category } from '../models/Category';
+import { CategoriesRepositories } from '../modules/cars/repositories/CategoriesRepository';
+import { CreateCategoriesService } from '../modules/cars/services/CreateCategoriesService';
 
 const categoriesRoutes = Router();
+const categoriesRepository = new CategoriesRepositories();
 
-const categories: Category[] = [];
+categoriesRoutes.get('/', (request, response) => {
+  const all = categoriesRepository.list();
+  return response.status(201).json(all);
+});
 
 categoriesRoutes.post('/', (request, response) => {
   const { name, description } = request.body;
 
-  const category: Category = new Category();
+  const createCategoryService = new CreateCategoriesService(categoriesRepository);
 
-  // O object.assign recebe um model/objeto e os tributos que
-  // devem ser passados para ele;
-  Object.assign(category, {
-    name,
-    description,
-    created_at: new Date(),
-  });
+  createCategoryService.execute({ name, description });
 
-  categories.push(category);
-
-  return response.status(201).json(categories);
+  return response.status(201).send();
 });
 
 export { categoriesRoutes };

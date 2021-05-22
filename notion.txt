@@ -44,3 +44,11 @@ Vamos usar o debug do próprio vscode;
     description,
     created_at: new Date(),
   });
+
+## Conceitos de repositórios
+  - Repositório é como uma classe responsável por manipular dados da nossa aplicação;
+  Fazer select, insert no banco de dados etc;
+  - As rotas chamam o repositório e ele quem terá a responsabildade de fazer
+  inserções no banco de dados ou deleções;
+  - DTO -> Data transfer object -> Criar um objeto que terá a responsabilidade de fazer a
+  transferência de dados entre uma classe e outra classe;
