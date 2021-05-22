@@ -3,3 +3,44 @@ fazer sempre conversão
 
 link para instalar prettier e editorcondig e eslint: https://www.notion.so/ESLint-e-Prettier-Trilha-Node-js-d3f3ef576e7f45dfbbde5c25fa662779#eaf6e8bdcabc4d809cdae302e29750da
 
+Para debugar uma aplicação Node.js é necessário configurar uma arquivo que é gerado
+na aba de debug, um arquivo de launch da aplicação.
+
+Vamos usar o debug do próprio vscode;
+
+## Configurações do arquivo de launch:
+
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            //Attach significa que será fixado na aplicação, se liga
+            //na aplicação no momento que o erro ocorre;
+            "request": "attach",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        }
+    ]
+}
+
+
+## Rotas
+  - Para cada entidade representada no banco devemos criar um arquivo de rotas;
+
+
+// O object.assign recebe um model/objeto e os atributos que
+  // devem ser passados para ele;
+  Object.assign(category, {
+    name,
+    description,
+    created_at: new Date(),
+  });
