@@ -23,3 +23,8 @@ as entidades que não dependem de outras;
   - Podemos estruturar a nossa aplicação em módulos, são pequenos blocos da nossa
   aplicação;
   - Criar um módulo de carro, tudo que for de carro deve ficar dentro dessa pasta
+
+## Criando as use cases de categorias
+  - Controllers são classes que recebem a nossa conexão e retornam a resposta para
+  quem está chamando elas;
+
