@@ -3,7 +3,7 @@
 import { Router } from 'express';
 
 import { CategoriesRepositories } from '../modules/cars/repositories/CategoriesRepository';
-import { CreateCategoriesService } from '../modules/cars/services/CreateCategoriesService';
+import { createCategoryController } from '../modules/cars/useCases/createCategory/index';
 
 const categoriesRoutes = Router();
 const categoriesRepository = new CategoriesRepositories();
@@ -13,14 +13,6 @@ categoriesRoutes.get('/', (request, response) => {
   return response.status(201).json(all);
 });
 
-categoriesRoutes.post('/', (request, response) => {
-  const { name, description } = request.body;
-
-  const createCategoryService = new CreateCategoriesService(categoriesRepository);
-
-  createCategoryService.execute({ name, description });
-
-  return response.status(201).send();
-});
+categoriesRoutes.post('/', (request, response) => createCategoryController.handle(request, response));
 
 export { categoriesRoutes };

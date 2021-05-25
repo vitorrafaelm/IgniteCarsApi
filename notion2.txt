@@ -27,4 +27,7 @@ as entidades que não dependem de outras;
 ## Criando as use cases de categorias
   - Controllers são classes que recebem a nossa conexão e retornam a resposta para
   quem está chamando elas;
-
+  - Use cases são as formas que a nossa aplicação será usada, o caso de uso de cada
+  aplicação;
+  - Use Cases são as regras de negócio da nossa aplicação;
+  - Todo useCase deve ter apenas um controller
