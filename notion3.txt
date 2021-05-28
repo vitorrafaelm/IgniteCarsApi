@@ -1,0 +1,24 @@
+# Upload de arquivos para poder ler arquivos e armazenados no banco de dados. Isso,
+de forma que não tenha de cadastrar arquivo por arquivo.
+
+# Vamos utilizar o Multer que serve para fazer a leitura de arquivos e fazer o Upload
+dos arquivos para dentro da nossa aplicação!
+  - O multer funciona como se fosse um middleware na nossa rota;
+  - Ele é responsável por receber o arquivo que é feito o upload;
+  - A ideia é receber o arquivo de categorias e armazenar dentro de uma pasta temporária;
+  - No insominia para fazer o upload de arquivo temos que utilizar o multiPartForm
+
+
+# Depois que o arquivo é passado para a aplicação precisamos ler ele;
+# o readFile do node.js faz a leitura toda de uma vez.
+# Vamos utilizar o conceito de streaming para ler o arquivo por parte e não todo de
+uma vez;
+# No caso se um player de vídeo, o servidor vai enviando o nosso vídeo aos poucos para
+o player no frontend;
+# lib csv parse -> Serve para a gente ler as informações de um arquivo linha por linha;
+
+## Os useCase seriam as regras de negócio da nossa aplicação, são as funcionalidades;
+
+## Quando usamos o async await temos que definir que o tipo de retorno é uma Promise por mais
+que não iremos ter nenhum tipo de retorno;
+
