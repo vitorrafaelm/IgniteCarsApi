@@ -1,0 +1,8 @@
+## Swagger - Serve para documentar API's;
+  - A documentação serve para outras pessoas entenderem como utilizar uma API;
+  - Quando estamos construindo o back-end temos que pensar em quem vai consumir
+  a API, permitir as pessoas saber as rotas, os parametros para enviar;
+
+## Utilizaremos uma Lib para implementar o Swagger na nossa aplicação: swagger-ui-express
+  - Usando o swagger conseguimos passar uma documentação que mostra aonde a documentação
+  da nossa aplicação vai ficar disponível;
