@@ -31,3 +31,10 @@ as entidades que não dependem de outras;
   aplicação;
   - Use Cases são as regras de negócio da nossa aplicação;
   - Todo useCase deve ter apenas um controller
+
+
+## Conhecendo Singleton Pattern: é um padrão de projeto
+  - Consiste em criar apenas uma instância da classe que será uma instância
+  global para a aplicação;
+  - Temos que saber se a classe precisa ou não de mais de uma instância;
+

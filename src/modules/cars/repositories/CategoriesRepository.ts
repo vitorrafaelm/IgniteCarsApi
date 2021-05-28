@@ -1,13 +1,25 @@
 import { Category } from '../models/Category';
-import { ICategoryRepository, ICreateCategoryDTO } from './ICategoriesRepository';
+import { ICategoryRepository, ICreateCategoryDTO } from './implementations/ICategoriesRepository';
 
 // DTO => Data Transfer Object
 
 class CategoriesRepositories implements ICategoryRepository {
   private categories: Category[];
 
-  constructor() {
+  private static INSTANCE: CategoriesRepositories;
+
+  // Colocando o constructor como private somente a própria classe
+  // consegue chamar o método construtor;
+  private constructor() {
     this.categories = [];
+  }
+
+  public static getInstance(): CategoriesRepositories {
+    if (!CategoriesRepositories.INSTANCE) {
+      CategoriesRepositories.INSTANCE = new CategoriesRepositories();
+    }
+
+    return CategoriesRepositories.INSTANCE;
   }
 
   list(): Category[] {
