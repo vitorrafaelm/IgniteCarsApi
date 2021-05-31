@@ -1,0 +1,9 @@
+## Docker
+    - É uma ferramenta para criação de containers; 
+    - Container é um ambiente de desenvolvimento isolado na nossa máquina; 
+    - Com os containers temos as nossas imagens que são as instruções para criação 
+    de um container; 
+    - Permite que a gente utilize o mesmo sistema operacional nos containers e deixa
+    a gente compartilhar recursos da máquina host; 
+    - Conseguimos utilizar todos os recursos da nossa máquina com o docker; 
+  
