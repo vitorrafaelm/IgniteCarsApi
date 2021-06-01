@@ -1,0 +1,18 @@
+## Utilizando banco de dados dentro da nossa aplicação
+  1. Uma forma de utilizar é usando o driver nativo do banco de dados;
+  - Pesquisar sobre o driver nativo do node-postgres;
+  - Cada driver pode se comportar de uma forma diferente;
+  2. Utilizar os Query builders
+  - Misturam o sql puro com o javascript puro, o Knex é um bom exemplo de
+  query builder;
+  3. Ulitizar um ORM - Typeorm
+  - Object relational mapping.
+  - MODEL <-> ORM <-> BANCO DE DADOS;
+  - O orm pega o nosso código e transforma para algo que o banco de dados
+  entenda;
+  - O sequilize é um ORM bem conhecido e muito usado também;
+
+## Adicionando banco de dados ao docker-compose
+  - É recomendado colocar o banco de dados primeiro no arquivo docker-compose
+  - network_mode: host -> Faz os services se enxergaram e com isso não precisa
+  colocar o nome do container no host do ormconfig.json
