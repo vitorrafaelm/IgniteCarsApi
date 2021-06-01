@@ -12,7 +12,10 @@ const upload = multer({
   dest: './tmp',
 });
 
-categoriesRoutes.get('/', (request, response) => listCategoriesController.handle(request, response));
+categoriesRoutes.get('/', (request, response) => {
+  console.log('reload working');
+  return listCategoriesController.handle(request, response);
+});
 
 categoriesRoutes.post('/', (request, response) => createCategoryController.handle(request, response));
 

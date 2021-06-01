@@ -1,9 +1,36 @@
 ## Docker
-    - É uma ferramenta para criação de containers; 
-    - Container é um ambiente de desenvolvimento isolado na nossa máquina; 
-    - Com os containers temos as nossas imagens que são as instruções para criação 
-    de um container; 
+    - É uma ferramenta para criação de containers;
+    - Container é um ambiente de desenvolvimento isolado na nossa máquina;
+    - Com os containers temos as nossas imagens que são as instruções para criação
+    de um container;
     - Permite que a gente utilize o mesmo sistema operacional nos containers e deixa
-    a gente compartilhar recursos da máquina host; 
-    - Conseguimos utilizar todos os recursos da nossa máquina com o docker; 
-  
+    a gente compartilhar recursos da máquina host;
+    - Conseguimos utilizar todos os recursos da nossa máquina com o docker;
+    - DockerHub é onde está todas as imagens oficiais
+    - WORKDIR - Onde as informações ficam dentro do contaier
+    - Depois de criado o Dockerfile e configurado basta rodar:
+    docker build -t rentx . - Esse comando cria a imagem, mas não executa;
+    - Para rodar a imagem usar docker run -p 3333:3333 rentx
+    - docker compose é um orquestrador de containers; A extensão .yml é toda identada,
+    então precisamos seguir uma estrutura para os nossos paramêtros;
+    - O docker-compose ajuda para colocar em produção, o ambiente de produção vai preciar
+    apenas de ter o docker e o docker-compose instalado;
+
+## Comandos Docker
+  - docker ps -> Usados para mostrar os containers que estão em execução;
+  - docker ps -a -> Mostra todos os containers, até os que estão parados;
+  - docker rm id_container -> Comando para remover o container, para que
+  consiga remover o container tem que está parado;
+  - docker start id_container -> Comando para executar um container;
+  - docker stop id_container -> Comando para parar o container;
+
+## Comandos docker-compose
+  - docker-compose up -d -> Comando para subir um container;
+  - docker-compose stop -> Comando para parar os containers;
+  - docker-compose down -> Remove tudo que a gente tiver criando dentro do serviço;
+  Se quiser apenas parar usar o stop;
+  - docker-compose stop/start devem ser usados depois que o container estiver construido;
+  - docker exec -it id_container sh ou bin/bash -> Comando para acessar os containers;
+  - docker logs id_container -> Para ver o que está acontecendo na nossa aplicação;
+  - docker logs id_container -f -> Para ficar observando o que acontece dentro dos containers;
+
