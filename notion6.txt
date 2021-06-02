@@ -16,3 +16,11 @@
   - É recomendado colocar o banco de dados primeiro no arquivo docker-compose
   - network_mode: host -> Faz os services se enxergaram e com isso não precisa
   colocar o nome do container no host do ormconfig.json
+
+## Conceito de migrations
+  - Migrations é como se fosse um versionamento de tudo que estámos fazendo no nosso
+  banco de dados;
+  - O nome da migrations é composto por um timestamp + nome da tabela;
+  - Ajuda a equipe a trabalhar com a mesma versão do banco de dados;
+
+## Refatorando o model de categoria
