@@ -23,4 +23,7 @@
   - O nome da migrations é composto por um timestamp + nome da tabela;
   - Ajuda a equipe a trabalhar com a mesma versão do banco de dados;
 
-## Refatorando o model de categoria
+## Injeção de dependências
+  - É o que é feito nos arquivos Index dos useCases, onde uma classe depende da outra
+  para funcionar;
+- TSyring é uma lib para ajudar a fazer injeção de dependência;
