@@ -27,3 +27,16 @@
   - É o que é feito nos arquivos Index dos useCases, onde uma classe depende da outra
   para funcionar;
 - TSyring é uma lib para ajudar a fazer injeção de dependência;
+
+## Jwt é o que garante que o usuário está autenticado e que esse usuário tem algumas
+permissões. O token é composto por header, payload (Não deve ser passado dados sensíveis) e
+e verify signature.
+
+## No insominia tem a autenticação por Bearer token, que é a utilizada pelo jtw,  quando enviamos
+o token, eleterá o seguinte formato: Bearer jdlkjalkdalkalçkdçalkçdkaçdça,dçl. Essas informações vem
+dentro do header da aplicação;
+
+const authHeader = request.headers.authorization; - É por onde o token é recebido;
+## Verificar se o token é enviado;
+
+## A Aula de tratamento de exceções precisa ser revista e praticada;
