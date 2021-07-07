@@ -40,3 +40,13 @@ const authHeader = request.headers.authorization; - É por onde o token é receb
 ## Verificar se o token é enviado;
 
 ## A Aula de tratamento de exceções precisa ser revista e praticada;
+
+## Upload de avatar:
+  - É salvo apenas a referência de onde a foto vai estar;
+  - Podemos salvar o arquivo em um storage como o amazon s3;
+  - Recuperador a imagem baseado em uma URL.
+  - Quando estamos trabalhando com typescript pode ser que tenhamos que sobre escrever algumas
+  tipagens;
+
+## Não é responsabilidade das nossas rotas fazer o upload; Logo devemos criar isso em outro lugar;
+  - Colocar a responsabilidade de fazer o upload dentro da pasta config;
