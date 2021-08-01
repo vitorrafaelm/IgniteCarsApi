@@ -50,3 +50,33 @@ const authHeader = request.headers.authorization; - É por onde o token é receb
 
 ## Não é responsabilidade das nossas rotas fazer o upload; Logo devemos criar isso em outro lugar;
   - Colocar a responsabilidade de fazer o upload dentro da pasta config;
+
+
+## Conhecendos tipos de testes
+  - Há testes unitários e testes de integração
+  - As regras de negócio devem se concentrar nos useCases;
+  - Testes unitários é testes das regras de negócio e é feito em um useCase;
+  - Testes de integração é quando queremos testar a aplicação inteira; Os testes de integração
+  testariam desde o momento onde a rota é chamada, até a chamada co controller e o retorno que
+  a requisição vai ter. Testamos o fluxo complexo da aplicação;
+  - Criamos um banco de testes para fazer todos os testes de integração;
+
+  - TDD - Não é uma forma de teste, é uma metodologia utilizada para fazer testes; Test Driven
+  Development (Desenvolvimento dirigido por testes);
+  - Começar pelo teste, e colocar a lógica dentro do teste e tudo que é preciso para a funciona-
+  lidade funcionar;
+  - A aplicação deve conter testes e os testes devem estar bem escritos;
+  - Os testes devem mostrar as regras de negócios;
+  - Utilizamos testes para manter as coisas da forma correta;
+  - Testes são importantes para a nossa aplicação;
+  - Os testes devem ficar dentro das pastas do useCase
+
+## Jest para realizar testes
+  - yarn add jest @types/jest
+  - yarn jest --init
+  - yarn add ts-jest -D
+  - Precisamos mostrar no teste o resultado que esperamos para uma determinada função;
+  - O describe() -> Serve para agrupar os nossos testes, dentro do describe é onde de fato
+  ficam os testes. Os testes ficam dentro do it()
+
+

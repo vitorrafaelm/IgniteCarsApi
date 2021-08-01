@@ -1,7 +1,7 @@
 import { getRepository, Repository } from 'typeorm';
 
+import { ICategoryRepository, ICreateCategoryDTO } from '../../../repositories/implementations/ICategoriesRepository';
 import { Category } from '../entities/Category';
-import { ICategoryRepository, ICreateCategoryDTO } from './implementations/ICategoriesRepository';
 
 // DTO => Data Transfer Object
 

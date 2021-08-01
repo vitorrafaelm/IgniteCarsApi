@@ -1,8 +1,9 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Router } from 'express';
 
+import { CreateSpecificationController } from '@modules/cars/useCases/createSpecifications/CreateSpecificationController';
+
 import { ensureAuthenticated } from '../middlewares/EnsureAuthenticated';
-import { CreateSpecificationController } from '../modules/cars/useCases/createSpecifications/CreateSpecificationController';
 
 const specificationsRoutes = Router();
 
