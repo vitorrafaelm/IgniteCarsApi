@@ -2,3 +2,6 @@
   - Escrever um teste que vai falhar
   - Fazer o teste passar
   - Refatorar
+
+# Seed
+  - É criar algum dado e rodar direto pela própria aplicação;
