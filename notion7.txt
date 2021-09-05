@@ -1,0 +1,4 @@
+# TDD
+  - Escrever um teste que vai falhar
+  - Fazer o teste passar
+  - Refatorar
