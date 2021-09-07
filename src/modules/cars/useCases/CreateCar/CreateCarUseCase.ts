@@ -47,7 +47,7 @@ class CreateCarUseCase {
       brand,
       category_id,
     });
-    console.log('aqui2');
+
     return car;
   }
 }
