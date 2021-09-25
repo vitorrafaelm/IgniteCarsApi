@@ -5,3 +5,8 @@
 
 # Seed
   - É criar algum dado e rodar direto pela própria aplicação;
+
+# Testes de integração com SuperTest.
+  - Permite a gente criar um servidor http dentro dos nossos testes
+  e definir o que esperamos dentro de cada requisição;
+  - É necessário criar uma estrutura de banco de dados para testes com supertest;
